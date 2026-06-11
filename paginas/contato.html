@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Iperó</title>
+    <link rel="stylesheet" href="../estilos/layout.css">
+    <link rel="shortcut icon" href="../midias/favicon.ico">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="../midias/ipero-logo.png" alt="Logotipo do portal Iperó Notícias">
+        </figure>
+        <h1>Portal Iperó Agora</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li><strong>Previsão do Tempo:</strong> Sol com muitas nuvens - 28°C</li>
+            <li><strong>Plantão:</strong> Inscrições abertas para cursos gratuitos no Centro Cultural</li>
+        </ul>
+    </aside>
+    <main id="formularioMain">
+        <form id="meuFormulario" action="#" method="post">
+            <h2>Contate-nos</h2>
+            <fieldset>
+                <input type="text" id="ipname" name="nome" required>
+                <label for="ipname">Nome*</label>
+            </fieldset>
+
+            <fieldset>
+                <input type="email" id="ipemail" name="email" required>
+                <label for="ipemail">Email*</label>
+            </fieldset>
+
+            <fieldset>
+                <input type="tel" id="iptel" name="tel">
+                <label for="iptel">Telefone</label>
+            </fieldset>
+
+            <fieldset>
+                <input type="text" id="ipend" name="end">
+                <label for="ipend">Endereço</label>
+            </fieldset>
+
+            <fieldset>
+                <input id="ipdata" name="data" type="date">
+                <label for="ipdata">Data de Nascimento</label>
+            </fieldset>
+
+            <fieldset>
+                <select id="slinfo" name="slinfo">
+                    <option value="amigos">Amigos</option>
+                    <option value="trabalho">Trabalhos</option>
+                    <option value="faculdade">Faculdade</option>
+                    <option value="escola">Escola</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <label for="slinfo">Onde nos conheceu?</label>
+            </fieldset>
+
+            <fieldset>
+                <textarea id="taMensagem" name="taMensagem" rows="5"></textarea>
+                <label for="taMensagem">Mensagem</label>
+            </fieldset>
+
+            <fieldset>
+                <input type="checkbox" id="ipcheck" name="check">
+                <label for="ipcheck">Deseja receber novidades?</label>
+            </fieldset>
+
+            <button type="button" onclick="enviarDados()">Enviar</button>
+        </form>
+
+        <section id="secaoConfirmacao" style="display: none; margin-top: 20px;">
+            <header>
+                <h1>Confirmação de Dados:</h1>
+            </header>
+
+            <p id="respNome"></p>
+            <p id="respEmail"></p>
+            <p id="respTelefone"></p>
+            <p id="respData"></p>
+            <p id="respInfo"></p>
+            <p id="respCheck"></p>
+            <p id="respMensagem"></p>
+
+            <button type="button" onclick="confirmarEnvio()">Confirmar e Enviar</button>
+        </section>
+
+    </main>
+    <footer>
+        <p>Copyright &copy; 2026 - Portal Iperó Agora. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../script/enviarDados.js"></script>
+</body>
+
+</html>
